@@ -4,6 +4,7 @@ this is the repository for the NEWGROUNDS version. You can modify it in any way 
 
 Credits:
 [SleP16](https://twitter.com/RealSleP16) - Programmer, artist, composer.
+
 [Anhedis](https://twitter.com/Anhedis) - Programmer.
 
 How to build the game:
