@@ -1,0 +1,29 @@
+[gd_resource type="ParticlesMaterial" load_steps=3 format=2]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[resource]
+trail_size_modifier = SubResource( 2 )
+flag_disable_z = true
+direction = Vector3( 1.239, -90, 0 )
+spread = 111.08
+gravity = Vector3( 0, 110, 0 )
+initial_velocity = 121.24
+angular_velocity = 613.13
+angular_velocity_random = 0.43
+orbit_velocity = 0.0
+orbit_velocity_random = 0.38
+linear_accel = 24.22
+linear_accel_random = 0.09
+radial_accel = -27.34
+angle = -67.5
+angle_random = 0.69
+scale = 4.0
+scale_random = 1.0
+color = Color( 0, 0.811765, 1, 1 )
+hue_variation = 0.12
+hue_variation_random = 1.0

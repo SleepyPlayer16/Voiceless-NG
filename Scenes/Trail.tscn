@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Trail.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.256506, 0.828996, 1 )
+colors = PoolColorArray( 1, 0.99086, 0.959942, 0.0495868, 1, 0.894118, 0.541176, 0.427451, 1, 0.815686, 0.192157, 0.639216, 1, 1, 1, 0 )
+
+[node name="Line2D" type="Line2D"]
+points = PoolVector2Array( 1.17346, -95.4361 )
+width = 20.0
+default_color = Color( 1, 0.815686, 0.192157, 1 )
+gradient = SubResource( 1 )
+script = ExtResource( 1 )
+trailLength = 15

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mus_tutorialAlt.ogg-d7f57e8f5cd2a5f554ac8dfff7269aa0.oggstr"
+
+[deps]
+
+source_file="res://Music/mus_tutorialAlt.ogg"
+dest_files=[ "res://.import/mus_tutorialAlt.ogg-d7f57e8f5cd2a5f554ac8dfff7269aa0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

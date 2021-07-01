@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/Misc/spr_checkpoint.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Misc/spr_tiney_particle.png" type="Texture" id=2]
+[ext_resource path="res://Particles/Checkpoint.tres" type="Material" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.5135, 20.5885 )
+
+[node name="Checkpoint" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 16, 27.3409 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 0
+texture = ExtResource( 1 )
+centered = false
+hframes = 2
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 16, 16 )
+emitting = false
+amount = 20
+lifetime = 1.89
+one_shot = true
+speed_scale = 1.22
+explosiveness = 0.81
+randomness = 0.33
+process_material = ExtResource( 3 )
+texture = ExtResource( 2 )

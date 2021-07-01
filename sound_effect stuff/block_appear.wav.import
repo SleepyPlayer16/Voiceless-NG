@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/block_appear.wav-92badee852d4f9f197b3b5cac657662d.sample"
+
+[deps]
+
+source_file="res://sound_effect stuff/block_appear.wav"
+dest_files=[ "res://.import/block_appear.wav-92badee852d4f9f197b3b5cac657662d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

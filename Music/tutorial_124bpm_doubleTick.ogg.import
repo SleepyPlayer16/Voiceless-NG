@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tutorial_124bpm_doubleTick.ogg-12ab48079eb6d3c0ec4aeea07c62d27c.oggstr"
+
+[deps]
+
+source_file="res://Music/tutorial_124bpm_doubleTick.ogg"
+dest_files=[ "res://.import/tutorial_124bpm_doubleTick.ogg-12ab48079eb6d3c0ec4aeea07c62d27c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

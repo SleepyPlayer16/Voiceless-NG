@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/GUI.gd" type="Script" id=1]
+
+[node name="GUI" type="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Bars" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Lifebar" type="HBoxContainer" parent="Bars"]
+margin_bottom = 40.0
+
+[node name="EnergyBar" type="HBoxContainer" parent="Bars"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 40.0

@@ -1,0 +1,119 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://objects/UserInput.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/DigitalDisco.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://objects/Console.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/CommandProcessor.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0.921569, 0.4, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0.921569, 0.4, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="Game" type="PanelContainer"]
+margin_left = 160.0
+margin_top = 104.0
+margin_right = 800.0
+margin_bottom = 437.0
+rect_clip_content = true
+focus_mode = 2
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+max_lines_remembered = 10
+
+[node name="CommandProcessor" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Background" type="PanelContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 333.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+margin_right = 640.0
+margin_bottom = 333.0
+custom_constants/margin_right = 40
+custom_constants/margin_top = 40
+custom_constants/margin_left = 40
+custom_constants/margin_bottom = 40
+
+[node name="Rows" type="VBoxContainer" parent="Background/MarginContainer"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 600.0
+margin_bottom = 293.0
+custom_constants/separation = 20
+
+[node name="GameInfo" type="PanelContainer" parent="Background/MarginContainer/Rows"]
+margin_right = 560.0
+margin_bottom = 173.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
+margin_right = 560.0
+margin_bottom = 173.0
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="History_rows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/ScrollContainer"]
+custom_constants/separation = 20
+
+[node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
+margin_top = 193.0
+margin_right = 560.0
+margin_bottom = 253.0
+rect_min_size = Vector2( 0, 60 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/Rows/InputArea"]
+margin_right = 560.0
+margin_bottom = 60.0
+
+[node name="Caret" type="Label" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+margin_top = 14.0
+margin_right = 58.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 5 )
+text = "  >  "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Input" type="LineEdit" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+margin_left = 62.0
+margin_right = 560.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+max_length = 4
+placeholder_text = "Insert a valid 4 digit code here..."
+script = ExtResource( 1 )
+
+[connection signal="text_entered" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_Input_text_entered"]
+[connection signal="text_entered" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_Input_text_entered"]

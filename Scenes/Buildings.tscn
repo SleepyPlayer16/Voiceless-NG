@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/backgrounds/world 1/spr_buildings_back.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Buildings.gd" type="Script" id=2]
+
+[node name="Buildings" type="Sprite"]
+scale = Vector2( 1.14286, 0.92 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1260, 200 )
+script = ExtResource( 2 )
