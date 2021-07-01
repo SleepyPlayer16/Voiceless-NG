@@ -11,3 +11,5 @@ Credits:
 How to build the game:
 Download Godot and import the project.godot file, then go to Project -> Export, click on "add..." and select Windows/Linux idk,
 and finally export the project, remember to disable the "Export with debug" option.
+ALSO, VERY IMPORTANT
+run the game from the very first scene so the data json gets generated, or else the game won't work!
