@@ -702,13 +702,13 @@ func soundplay(_sound):
 	var select_sound = AudioStreamPlayer.new()
 	self.add_child(select_sound)
 	select_sound.stream = _sound
+	if play_sfx == true:
+		select_sound.play()
 	if play_sfx == false and (select_sound.stream == load("res://sound_effect stuff/explode (1).wav")
 		||select_sound.stream == load("res://sound_effect stuff/positive.wav")
 		||select_sound.stream == load("res://sound_effect stuff/checkpoint.wav")
 		||select_sound.stream == load("res://sound_effect stuff/sfx_teleport.wav")
 		||select_sound.stream == load("res://sound_effect stuff/sfx_clock_collect.wav")):
-		select_sound.play()
-	else:
 		select_sound.play()
 	select_sound.volume_db = -3
 	if get_tree().current_scene.name == "menu":
